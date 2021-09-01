@@ -383,7 +383,7 @@ template {
   display: flex;
   justify-content: space-between;
   align-items: center;  
-  padding: 17px 0;
+  padding: 15px 0;
   border-bottom: 1px solid #000;
 }
 
@@ -456,8 +456,15 @@ template {
 }
 
 @media (max-width:730px) {
- .navbar {
-   flex-shrink: 2;
+ .header__inner {
+   line-height: 2.5;
  }
- 
+ .navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .contact {
+   width: 50%;
+ }
 }
