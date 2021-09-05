@@ -269,12 +269,6 @@ textarea {
  * 2. Remove the padding in IE 10.
  */
 
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
-
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
@@ -380,7 +374,6 @@ template {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 .header__inner {
@@ -450,26 +443,72 @@ nav ul li a:hover {
   margin-left: 30px;
 }
 
-@media (max-width:1060px) {
-  .header__inner {
-    flex-direction: column;
-    margin: 0 15px;
-  }
+.checkbtn {
+  color: white;
+  cursor: pointer;
+  display: none;
 }
 
-@media (max-width:730px) {
- .header__inner {
-   line-height: 2.5;
+#check {
+  display: none;
+}
+
+@media (max-width:1060px) {
+  .logo {
+    flex-grow: 1;
+  }
+  .header__inner {
+    padding: 15px 15px;
+  }
+
+}
+
+@media (max-width:805px) {
+  .checkbtn {
+    display: block;
+    font-size: 30px;
+    color: #007ce1;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 87px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+
+  }
+ nav ul li a {
+   font-size: 1.4em;
+   color: #fff;
  }
- .nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ a:hover, a.active {
+   color: #0082e6;
  }
- .contact {
-   width: 50%;
+ 
+ #check:checked ~ ul {
+   left: 0;
+   padding: 0 10px;
  }
- nav li {
-   font-size: 1.2em;
+
+ .phone{
+   color: #fff;
+ }
+
+ section {
+   background-image: url(/Img/bg.jpg) no-repeat;
+   background-size: cover;
+   height: calc(100vh) - 80px;
  }
 }
